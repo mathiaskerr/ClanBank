@@ -40,3 +40,19 @@ def delete(id):
     sql = "DELETE FROM merchants WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def update(merchant):
+    sql = "UPDATE merchants SET (name, category) = (%s, %s) WHERE id = %s"
+    values = [merchant.name, merchant.category, merchant.id]
+    run_sql(sql, values)
+
+def transactions(merchant):
+    transactions = []
+    sql = "SELECT * FROM transactions WHERE merchant_id = %s"
+    values = [merchant.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        transaction = Transaction(merchant, row['tag'], row['amount'], row["time"], row['id'])
+        transactions.append(transaction)
+    return transactions
