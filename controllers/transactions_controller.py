@@ -9,5 +9,10 @@ transactions_blueprint = Blueprint("transactions",__name__)
 
 @transactions_blueprint.route("/transactions")
 def transactions():
-    
-    return render_template("transactions/index.html")
+    transactions = transaction_repository.select_all()
+    return render_template("transactions/index.html", all_transactions = transactions)
+
+@transactions_blueprint.route("/transactions/new")
+def new_transaction():
+    merchants = merchant_repository.select_all()
+    return render_template("transactions/new.html", all_merchants = merchants)   
