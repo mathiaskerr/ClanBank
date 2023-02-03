@@ -11,6 +11,6 @@ CREATE TABLE transactions(
     id SERIAL PRIMARY KEY,
     merchant_id INT NOT NULL REFERENCES merchants(id),
     tag VARCHAR(255),
-    timestamp VARCHAR(255),
+    time VARCHAR(255),
     amount FLOAT
 );
