@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+
+<div>
+    <P>Order no: {{show_transaction.id}}</P>
+    <p>Merchant: {{show_transaction.merchant.name}}</p>
+    <p>Amount: {{show_transaction.amount}}</p>
+    <p>Date & Time: {{show_transaction.time}}</p>
+    <form action="transaction/{{show_transaction.id}}/edit">
+        <input type="submit" value="Edit"/>
+    </form>    
+    
+</div>
+{% endblock %}
+

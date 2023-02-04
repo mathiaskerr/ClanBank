@@ -7,3 +7,16 @@
     margin: 10px;
     padding: 10px;
 }
+
+.navigate {
+    list-style: None;
+    display:flex
+}
+
+.navigate > li > a{
+    text-decoration: none;
+}
+
+.transaction-buttons . div {
+    margin: 10px;
+}

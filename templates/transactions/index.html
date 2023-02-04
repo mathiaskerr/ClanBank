@@ -4,13 +4,13 @@
 <header>
     <li><a href="/transactions/new">New Transaction</a></li> 
 </header>
+<table>
 {% for transaction in all_transactions %}
-<a href="/transactions/{{transaction.id}}">
     <div class="transaction">
-            <a href="/transactions/{{transaction.id}}">{{transaction.merchant.name}}--{{transaction.tag}}--{{transaction.time}}--  £{{transaction.amount}}
+            <a href="/transaction/{{transaction.id}}">{{transaction.merchant.name}}--{{transaction.tag}}--{{transaction.time}}--  £{{transaction.amount}}
     </div>
 </a>       
- 
+
 
 {% endfor %}
 {% endblock %}
