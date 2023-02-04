@@ -6,6 +6,8 @@
 <div>
     <P>Order no: {{show_transaction.id}}</P>
     <p>Merchant: {{show_transaction.merchant.name}}</p>
+    <p>Category: {{show_transaction.merchant.category}}</p>
+    <p>Tag: {{show_transaction.tag}}</p>
     <p>Amount: {{show_transaction.amount}}</p>
     <p>Date & Time: {{show_transaction.time}}</p>
     <form action="/{{show_transaction.id}}/edit_transaction">

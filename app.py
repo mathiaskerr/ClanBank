@@ -1,12 +1,13 @@
 from flask import Flask, render_template
 from controllers.transactions_controller import transactions_blueprint
-
+from controllers.merchants_controller import merchants_blueprint
 
 
 app = Flask(__name__)
 
-# app.register_blueprint(****_blueprint) for each class 
+
 app.register_blueprint(transactions_blueprint)
+app.register_blueprint(merchants_blueprint)
 
 @app.route('/')
 def home():

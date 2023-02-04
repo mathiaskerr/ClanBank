@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+{% for merchant in all_merchants %}
+<div class="merchants">
+ <p><a href="/merchant/{{merchant.id}}">{{merchant.name}}</a></p>       <!-- this will link to purchases with that id -->
+    <p>{{merchant.category}}</p>
+        <form action="/merchant/{{merchant.id}}/delete" method="POST">
+        <button class="delete">Delete</button>
+    </form>  
+    <form action="/{{merchant.id}}/edit_merchant">
+        <input type="submit" value="Edit"/>
+    </form>   
+</div>      
+{% endfor %}
+
+
+
+{% endblock %}
