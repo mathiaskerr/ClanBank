@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<h1>Merchant ID: {{merchant.id}}</h1>
+<form action="/merchant/{{merchant.id}}/edit_complete" method="post">
+    <div>
+        <input type="text" id="name" name="name" placeholder="Merchant" required >
+    </div>
+    <div>
+        
+        <input type="text" id="category" name="category" placeholder="Category" required >
+    </div>
+    <button type="submit">Submit</button>
+    </form>
+
+{% endblock %}

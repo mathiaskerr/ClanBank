@@ -17,13 +17,15 @@
 
 {% for merchant in all_merchants %}
 <div class="merchants">
+    
  <p><a href="/merchant/{{merchant.id}}/transactions">{{merchant.name}}</a></p>       <!-- this will link to purchases with that id -->
-    <p>{{merchant.category}}</p>
+ <p>Merchant ID: {{merchant.id}}</p>  
+ <p>{{merchant.category}}</p>
 
     <form action="/merchants/{{merchant.id}}/delete" method="POST">
         <button class="delete">Delete</button>
     </form>  
-    <form action="/{{merchant.id}}/edit_merchant">
+    <form action="/merchant/{{merchant.id}}/edit">
         <input type="submit" value="Edit"/>
     </form>   
 </div>      
