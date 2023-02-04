@@ -22,6 +22,7 @@ def new_transaction():
 def create_transaction():
     merchant_id = request.form['merchant_id']
     tag = request.form['tag']
+    tag = tag.upper()
     time = request.form['time']
     amount = request.form['amount']
     merchant = merchant_repository.select(merchant_id)
