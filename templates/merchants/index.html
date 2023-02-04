@@ -1,7 +1,7 @@
 {% extends 'base.html'%}
 
 {% block content %}
-<!-- <a href="/merchants/new">Create New Merchant</a> -->
+
     <a>Create New Merchant</a>
 
 <form action="/merchants" method="post">
@@ -19,7 +19,8 @@
 <div class="merchants">
  <p><a href="/merchant/{{merchant.id}}/transactions">{{merchant.name}}</a></p>       <!-- this will link to purchases with that id -->
     <p>{{merchant.category}}</p>
-        <form action="/merchant/{{merchant.id}}/delete" method="POST">
+
+    <form action="/merchants/{{merchant.id}}/delete" method="POST">
         <button class="delete">Delete</button>
     </form>  
     <form action="/{{merchant.id}}/edit_merchant">
@@ -27,7 +28,5 @@
     </form>   
 </div>      
 {% endfor %}
-
-
 
 {% endblock %}

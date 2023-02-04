@@ -23,3 +23,13 @@ def create_merchant():
     merchant = Merchant(name, category)
     merchant_repository.save(merchant)
     return redirect('/merchants')
+
+@merchants_blueprint.route("/<id>/edit_merchant")
+def edit_merchant():
+    merchant = merchant_repository.select(id)
+    
+
+@merchants_blueprint.route("/merchants/<id>/delete", methods = ["POST"])
+def delete_merchant(id):
+    merchant_repository.delete(id)
+    return redirect('/merchants')
