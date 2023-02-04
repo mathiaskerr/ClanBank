@@ -8,10 +8,12 @@
     <p>Merchant: {{show_transaction.merchant.name}}</p>
     <p>Amount: {{show_transaction.amount}}</p>
     <p>Date & Time: {{show_transaction.time}}</p>
-    <form action="transaction/{{show_transaction.id}}/edit">
+    <form action="/{{show_transaction.id}}/edit_transaction">
         <input type="submit" value="Edit"/>
     </form>    
-    
+    <form action="/transaction/{{show_transaction.id}}/delete" method="POST">
+        <button class="delete">Delete</button>
+    </form>   
 </div>
 {% endblock %}
 

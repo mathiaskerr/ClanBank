@@ -2,12 +2,15 @@
 
 {% block content %}
 <header>
-    <li><a href="/transactions/new">New Transaction</a></li> 
+    <a href="/transactions/new">New Transaction</a>
 </header>
 <table>
 {% for transaction in all_transactions %}
     <div class="transaction">
             <a href="/transaction/{{transaction.id}}">{{transaction.merchant.name}}--{{transaction.tag}}--{{transaction.time}}--  £{{transaction.amount}}
+                <form action="/transaction/{{transaction.id}}/delete" method="POST">
+                <button class="delete">Delete</button>
+            </form>    
     </div>
 </a>       
 

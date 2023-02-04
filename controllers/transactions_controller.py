@@ -34,3 +34,14 @@ def create_transaction():
 def show_transaction(id):
     transaction = transaction_repository.select(id)
     return render_template("transactions/show.html", show_transaction = transaction)
+
+@transactions_blueprint.route("/<id>/edit_transaction")
+def edit_transaction(id):
+    transaction = transaction_repository.select(id)
+    merchants = merchant_repository.select_all()
+    return render_template("transactions/edit.html", transaction = transaction, merchants = merchants)
+
+@transactions_blueprint.route("/transaction/<id>/delete", methods = ["POST"])
+def delete_transaction(id):
+    transaction_repository.delete(id)
+    return redirect('/transactions')
