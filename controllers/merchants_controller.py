@@ -42,3 +42,8 @@ def update_merchant(id):
 def delete_merchant(id):
     merchant_repository.delete(id)
     return redirect('/merchants')
+
+@merchants_blueprint.route("/merchant/<id>/transactions")
+def merchant_transactions(id):
+    transactions = merchant_repository.transactions(id)
+    return render_template("merchants/transactions.html", transactions=transactions)

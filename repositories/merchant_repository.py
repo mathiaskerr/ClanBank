@@ -45,13 +45,14 @@ def update(merchant):
     values = [merchant.name, merchant.category, merchant.id]
     run_sql(sql, values)
 
-def transactions(merchant):
+def transactions(id):
     transactions = []
     sql = "SELECT * FROM transactions WHERE merchant_id = %s"
-    values = [merchant.id]
+    values = [id]
     results = run_sql(sql, values)
 
     for row in results:
+        merchant = select(id)
         transaction = Transaction(merchant, row['tag'], row['amount'], row["time"], row['id'])
         transactions.append(transaction)
     return transactions
