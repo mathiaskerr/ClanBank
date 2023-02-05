@@ -69,3 +69,26 @@ def update_transaction(id):
 def delete_transaction(id):
     transaction_repository.delete(id)
     return redirect('/transactions')
+
+@transactions_blueprint.route("/tags")
+def tags():
+    transactions = transaction_repository.select_all()
+    tags=[]
+    for transaction in transactions:
+        if transaction.tag not in tags:
+            tags.append(transaction.tag)
+    
+    return render_template("transactions/tags.html", tags = tags)
+
+@transactions_blueprint.route("/tags/<tag>/transactions")
+def tag_transactions(tag):
+
+    transactions = transaction_repository.select_all()
+    transaction_tag = []
+    for transaction in transactions:
+        if transaction.tag == tag:
+            transaction_tag.append(transaction)
+    return render_template("transactions/tag_transactions.html", transactions = transaction_tag)
+
+
+
