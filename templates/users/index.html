@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+{% for user in users%}
+{{user.first_name}}<br>
+{{user.last_name}}<br>
+{{user.budget}}
+<form action="/profile/{{user.id}}/edit">
+    <input type="submit" value="Edit"/>
+</form>   
+{% endfor %}
+{% endblock %}

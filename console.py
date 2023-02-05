@@ -17,6 +17,7 @@ merchant_3 = Merchant('Howlin Wolf', 'Bar')
 
 user_1 = User("Mathias", "Kerr", 1000.50)
 user_repository.save(user_1)
+# result = user_repository.select(4)
 
 merchant_repository.save(merchant_1)
 merchant_repository.save(merchant_2)
@@ -35,4 +36,4 @@ transaction_repository.save(transaction_3)
 # result1 = transaction_repository.select_all()
 
 
-# pdb.set_trace()
+pdb.set_trace()

@@ -11,6 +11,26 @@ def save(user):
     user.id = id
     return user
 
+def select_all():
+    users = []
+    sql = "SELECT * FROM users"
+    results = run_sql(sql)
+
+    for row in results:
+        user = User(row['first_name'], row['last_name'], row['budget'], row['id'] )
+        users.append(user)
+    return users
+
+def select(id):
+    user = None
+    sql = "SELECT * FROM USERS WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result:
+        user = User(result['first_name'], result['last_name'], result['budget'], result['id'])
+    return user    
+
 def delete_all():
     sql = "DELETE  FROM users"
     run_sql(sql)
