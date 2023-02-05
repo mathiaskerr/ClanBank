@@ -1,10 +1,17 @@
 {% extends 'base.html'%}
 
 {% block content %}
-
+<p>Total Spend£{{total}}</p>
 {% for transaction in transactions %}
-{{transaction}}
+    <div class="transaction">
+            <a href="/transaction/{{transaction.id}}">{{transaction.merchant.name}}--{{transaction.tag}}--{{transaction.time}}--  £{{transaction.amount}}</a>   
+                <form action="/transaction/{{transaction.id}}/delete" method="POST">
+                <button class="delete">Delete</button>
+            </form>    
+    </div>
+    
 
+    
 {% endfor %}
 
 {% endblock %}

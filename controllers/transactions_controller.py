@@ -88,7 +88,11 @@ def tag_transactions(tag):
     for transaction in transactions:
         if transaction.tag == tag:
             transaction_tag.append(transaction)
-    return render_template("transactions/tag_transactions.html", transactions = transaction_tag)
+
+    total = 0
+    for transaction in transaction_tag:
+        total += transaction.amount
+    return render_template("transactions/tag_transactions.html", transactions = transaction_tag, total=total)
 
 
 
