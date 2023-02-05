@@ -15,7 +15,7 @@ merchant_1 = Merchant('Lidl', "grocery")
 merchant_2 = Merchant('Tesco', 'Grocery')
 merchant_3 = Merchant('Howlin Wolf', 'Bar')
 
-user_1 = User("Mathias", "Kerr", 1000.50)
+user_1 = User("Mathias", "Kerr", 1000.00)
 user_repository.save(user_1)
 # result = user_repository.select(4)
 

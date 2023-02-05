@@ -46,4 +46,7 @@ def delete_merchant(id):
 @merchants_blueprint.route("/merchant/<id>/transactions")
 def merchant_transactions(id):
     transactions = merchant_repository.transactions(id)
-    return render_template("merchants/transactions.html", transactions=transactions)
+    total = 0
+    for transaction in transactions:
+        total += transaction.amount
+    return render_template("merchants/transactions.html", transactions=transactions, total=total)

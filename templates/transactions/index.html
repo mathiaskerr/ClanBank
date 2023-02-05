@@ -4,6 +4,7 @@
 <header>
     <a href="/transactions/new">Create New Transaction</a>
 </header>
+<p>Total {{total}}</p>
 
 {% for transaction in all_transactions %}
     <div class="transaction">
@@ -12,8 +13,9 @@
                 <button class="delete">Delete</button>
             </form>    
     </div>
+    
 
-
+    
 {% endfor %}
 
 {% endblock %}

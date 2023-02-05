@@ -24,3 +24,4 @@ def update_user(id):
     user = User(first_name, last_name, budget, id)
     user_repository.update(user)
     return redirect('/profile')
+
