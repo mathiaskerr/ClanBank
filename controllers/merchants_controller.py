@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-from repositories import transaction_repository
+# from repositories import transaction_repository
 from repositories import merchant_repository
 from models.merchant import Merchant
 

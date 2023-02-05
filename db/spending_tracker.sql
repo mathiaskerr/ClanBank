@@ -1,5 +1,7 @@
 DROP TABLE IF EXISTS transactions;
 DROP TABLE IF EXISTS merchants;
+DROP TABLE IF EXISTS users;
+
 
 CREATE TABLE merchants(
     id SERIAL PRIMARY KEY,
@@ -13,4 +15,10 @@ CREATE TABLE transactions(
     tag VARCHAR(255),
     time VARCHAR(255),
     amount FLOAT
+);
+CREATE TABLE users(
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    budget FLOAT
 );
