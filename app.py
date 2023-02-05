@@ -20,8 +20,6 @@ def home():
     total = 0
     for transaction in transactions:
         total += transaction.amount
-    
-
     return render_template('index.html', total = total, user = user)
 
 if __name__ == '__main__':
