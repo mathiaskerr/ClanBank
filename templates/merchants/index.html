@@ -17,8 +17,8 @@
 <div class="merchant_box">
 {% for merchant in all_merchants %}
 <div class="merchants">
-    
- <p><a href="/merchant/{{merchant.id}}/transactions">{{merchant.name}}</a></p>       <!-- this will link to purchases with that id -->
+ <h3>{{merchant.name}}</h3>
+ <p><a href="/merchant/{{merchant.id}}/transactions">View Purchases</a></p>       <!-- this will link to purchases with that id -->
  <p>Merchant ID: {{merchant.id}}</p>  
  <p>{{merchant.category}}</p>
 
