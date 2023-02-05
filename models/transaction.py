@@ -8,4 +8,8 @@ class Transaction:
         self.time = time
         self.id = id
 
-        # datetime.now()
+    def total_amount(transactions):
+        total = 0
+        for transaction in transactions:
+            total += transaction.amount
+        return total    

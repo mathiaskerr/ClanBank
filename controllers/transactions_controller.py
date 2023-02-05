@@ -1,4 +1,3 @@
-import pdb
 from flask import Flask, render_template, request, redirect
 from repositories import transaction_repository
 from repositories import merchant_repository
@@ -18,7 +17,13 @@ def transactions():
     total = 0
     for transaction in transactions:
         total += transaction.amount
-    return render_template("transactions/index.html", all_transactions = transactions, user=user, total=total) 
+
+    spend = user.budget - total
+    if spend > 0:
+        spending = f'You have £{spend} left.'
+    else:
+        spending = f'You have gone £{spend * -1} over.'    
+    return render_template("transactions/index.html", all_transactions=transactions, user=user, total=total, spending=spending ) 
 
 @transactions_blueprint.route("/transactions/new")
 def new_transaction():
