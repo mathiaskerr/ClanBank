@@ -9,11 +9,11 @@ from models.user import User
 from flask import Blueprint
 
 transactions_blueprint = Blueprint("transactions",__name__)
-
+# ive done this in a bit of a messy way but I believe if there was multiple users it would be easier to clean up
 @transactions_blueprint.route("/transactions")
 def transactions():
-    user_1 = User("Mathias", "Kerr", 1000.00)
-    user = user_repository.save(user_1)
+    user = user_repository.select_all()
+    user = user_repository.select(user[0].id)
     transactions = transaction_repository.select_all()
     total = 0
     for transaction in transactions:
