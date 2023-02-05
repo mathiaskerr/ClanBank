@@ -6,7 +6,8 @@ DROP TABLE IF EXISTS users;
 CREATE TABLE merchants(
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    category VARCHAR(255)
+    category VARCHAR(255),
+    active BOOLEAN
 );
 
 CREATE TABLE transactions(

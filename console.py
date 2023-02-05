@@ -11,9 +11,9 @@ merchant_repository.delete_all()
 transaction_repository.delete_all()
 user_repository.delete_all()
 
-merchant_1 = Merchant('UK Government', "Espionage")
-merchant_2 = Merchant('Jaguar', 'Automobile')
-merchant_3 = Merchant('Love Honey', '****')
+merchant_1 = Merchant('UK Government', "Espionage", True)
+merchant_2 = Merchant('Jaguar', 'Automobile', True)
+merchant_3 = Merchant('Love Honey', '****', True)
 
 user_1 = User("Austin", "Powers", 1000.00)
 result = user_repository.save(user_1)

@@ -8,7 +8,9 @@
         <!-- <label for="merchant">Merchant</label> -->
         <select id="merchant" name="merchant_id">
             {% for merchant in all_merchants %}
+                {% if merchant.active == True %}
             <option value="{{merchant.id}}">{{merchant.name}}</option>
+                {% endif %}
             {% endfor %}
         </select>
     </div>

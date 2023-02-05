@@ -75,3 +75,11 @@ a {
     display:grid;
     grid-template-columns: 25% 25% 25% 25%;
 }
+.fa fa-check{
+    display:contents;
+    font-size: 50%;
+}
+.fa fa-times{
+    display:contents;
+    font-size: 50%;
+}

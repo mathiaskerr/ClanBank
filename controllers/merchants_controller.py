@@ -20,7 +20,8 @@ def merchants():
 def create_merchant():
     name = request.form['name']
     category = request.form['category']
-    merchant = Merchant(name, category)
+    active = request.form['active']
+    merchant = Merchant(name, category, active)
     merchant_repository.save(merchant)
     return redirect('/merchants')
 
@@ -33,7 +34,8 @@ def edit_merchant(id):
 def update_merchant(id):
     name = request.form['name']
     category = request.form['category']
-    merchant = Merchant(name, category, id)
+    active= request.form['active']
+    merchant = Merchant(name, category, active, id)
     merchant_repository.update(merchant)
     return redirect('/merchants')
 
