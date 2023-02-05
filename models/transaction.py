@@ -13,3 +13,11 @@ class Transaction:
         for transaction in transactions:
             total += transaction.amount
         return total    
+
+    def on_budget(user,transactions):
+        total.amount(transactions)
+        spend = user.budget - total
+        if spend > 0:
+            spending = f'You have £{spend} left.'
+        else:
+            spending = f'You have gone £{spend * -1} over.' 

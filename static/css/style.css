@@ -1,5 +1,10 @@
 *{
     text-align: center;
+    
+}
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(17,17,144,1) 20%, rgba(0,212,255,1) 99%);
 }
 
 .transaction{
@@ -15,6 +20,7 @@
 
 .navigate > li > a{
     text-decoration: none;
+    color: white
 }
 
 .transaction-buttons . div {
@@ -24,5 +30,9 @@
 .merchants{
     border: 1px solid black;
     margin: 10px;
-    padding: 10px;    
+    padding: 10px;
+}
+.merchant_box{
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
 }
