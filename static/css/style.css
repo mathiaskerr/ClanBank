@@ -15,14 +15,17 @@ body {
 
 .navigate {
     list-style: None;
-    display:flex
+    display:flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .navigate > li > a{
     text-decoration: none;
     color: white;
     padding: 10px;
-    font-size:large;
+    font-size: 25px;
 }
 
 .transaction-buttons . div {

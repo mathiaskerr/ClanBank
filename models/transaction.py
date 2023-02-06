@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date
 from models.user import User
 
 class Transaction:
@@ -9,16 +9,16 @@ class Transaction:
         self.time = time
         self.id = id
 
-    def total_amount(transactions):
-        total = 0
-        for transaction in transactions:
-            total += transaction.amount
-        return total    
+    # def total_amount(transactions):
+    #     total = 0
+    #     for transaction in transactions:
+    #         total += transaction.amount
+    #     return total    
 
-    def on_budget(user,transactions):
-        total.amount(transactions)
-        spend = user.budget - total
-        if spend > 0:
-            spending = f'You have £{spend} left.'
-        else:
-            spending = f'You have gone £{spend * -1} over.' 
+    # def on_budget(budget, total):
+
+    #     spend = budget - total
+    #     if spend > 0:
+    #         spending = f'You have £{spend} left.'
+    #     else:
+    #         spending = f'You have gone £{spend * -1} over.' 
