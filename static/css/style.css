@@ -4,7 +4,9 @@
     font-family: optima;
     color: white;
 }
-
+a {
+    text-decoration: None;
+}
 body {
     /* background-image: url("/static/images/background.jpg"); */
     background-color: purple;
@@ -13,6 +15,11 @@ body {
 body {
     /* background: rgb(2,0,36);
     background: linear-gradient(90deg, rgb(132, 128, 226) 0%, rgb(84, 84, 219) 20%, rgba(0,212,255,1) 99%); */
+}
+button.delete{
+    
+    width: 75px;
+    color: red;
 }
 
 .edit-merchant {
@@ -30,10 +37,16 @@ body {
     color: green;
 
 }
-.transaction{
-    border: 1px solid black;
+
+.merchants{
+    border: 1px  rgba(0, 0, 0, 0.714);
     margin: 10px;
     padding: 10px;
+    box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
+}
+.merchant_box{
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
 }
 
 .navigate {
@@ -43,8 +56,8 @@ body {
     list-style: None;
     display:flex;
     justify-content: space-between;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
     box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
 }
 
@@ -67,28 +80,14 @@ body {
     color: green;
 }
 
-.transaction-buttons . div {
-    margin: 10px;
-}
-
-.merchants{
-    border: 1px  rgba(0, 0, 0, 0.714);
-    margin: 10px;
-    padding: 10px;
-    box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
-}
-.merchant_box{
-    display:grid;
-    grid-template-columns: 33% 33% 33%;
-}
 
 
 .drevil{
-    display:flex;
-    justify-content: flex-end;
-    align-content: center;
-    margin-right: 20%;
-    
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    width: 200px;
+    height: 100px;
 }
 
 .home-text{
@@ -112,24 +111,35 @@ body {
     margin-left: 20%;
     margin-right: 20%;
 }
-a {
-    text-decoration: None;
-}
+
 .tags{
-    border: 1px solid black;
+    border: 1px  rgba(0, 0, 0, 0.714);
     margin: 10px;
     padding: 10px;
-    
+    box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
 }
 .tags-box{
     display:grid;
     grid-template-columns: 25% 25% 25% 25%;
 }
-.fa fa-check{
-    display:contents;
-    font-size: 50%;
+.transaction{
+    border: 1px  rgba(0, 0, 0, 0.714);
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
+
 }
-.fa fa-times{
-    display:contents;
-    font-size: 50%;
+
+.transaction > ul{
+    list-style: none;
+    display:grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.transaction-title {
+    font-weight: bolder;
+    font-size: x-large;
+    list-style: none;
+    display:grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
 }

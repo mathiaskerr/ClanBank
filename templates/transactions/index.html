@@ -2,7 +2,7 @@
 
 {% block content %}
 <header>
-    <a href="/transactions/new">Create New Transaction</a>
+
 </header>
 <ul class="spending">
     <li>Total Spend: £{{total}}</li>
@@ -10,13 +10,27 @@
     <li>{{spending}}</li>
 </ul>
 
+<ul class="transaction-title">
+    <li>Merchant</li>
+    <li>Tag</li>
+    <li>Date</li>
+    <li>Amount</li>
+    <li>Delete</li>
+</ul>
 {% for transaction in all_transactions %}
-    <div class="transaction">
-            <a href="/transaction/{{transaction.id}}">{{transaction.merchant.name}}--{{transaction.tag}}--{{transaction.date}}--  £{{transaction.amount}}</a>   
+<a href="/transaction/{{transaction.id}}"><div class="transaction">
+        <ul> 
+            <li>{{transaction.merchant.name}}</li>
+            <li>{{transaction.tag}}</li>
+            <li>{{transaction.date}}</li>
+            <li>£{{transaction.amount}}</li>
+    
+ 
                 <form action="/transaction/{{transaction.id}}/delete" method="POST">
                 <button class="delete">Delete</button>
             </form>    
-    </div>
+        </ul>   
+    </div></a>
     
 
     
