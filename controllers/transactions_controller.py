@@ -4,7 +4,7 @@ from repositories import merchant_repository
 from repositories import user_repository
 from models.transaction import Transaction
 from models.user import User
-from datetime import datetime
+from datetime import datetime, date
 from flask import Blueprint
 
 transactions_blueprint = Blueprint("transactions",__name__)
@@ -40,6 +40,7 @@ def create_transaction():
     tag = request.form['tag']
     tag = tag.upper()
     date = datetime.strptime(request.form["date"], '%Y-%m-%d')
+    date = datetime.date(date)
     amount = request.form['amount']
     merchant = merchant_repository.select(merchant_id)
     transaction = Transaction(merchant, tag, amount, date)
@@ -63,6 +64,7 @@ def update_transaction(id):
     tag = request.form['tag']
     tag = tag.upper()
     date = datetime.strptime(request.form["date"], '%Y-%m-%d')
+    date = datetime.date(date)
     amount = request.form['amount']
     merchant = merchant_repository.select(merchant_id)
     transaction = Transaction(merchant, tag, amount, date, id)

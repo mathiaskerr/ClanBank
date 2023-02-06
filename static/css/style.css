@@ -129,6 +129,19 @@ button.delete{
     box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
 
 }
+.transaction-buttons > div > input{
+    width: 150px;
+    color: black;
+    padding: 5px;
+    margin: 5px;
+}
+
+.transaction-buttons > div > select {
+    width: 163px;
+    color: black;
+    padding: 5px;
+    margin: 5px;
+}
 
 .transaction > ul{
     list-style: none;
