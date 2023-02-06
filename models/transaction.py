@@ -1,4 +1,5 @@
 from datetime import datetime
+from models.user import User
 
 class Transaction:
     def __init__(self, merchant, tag, amount, time, id=None):

@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 from repositories import transaction_repository
 from repositories import merchant_repository
 from repositories import user_repository
-from models.transaction import Transaction
+from models.transaction import Transaction #, total_amount
 from models.user import User
 
 from flask import Blueprint
@@ -17,6 +17,7 @@ def transactions():
     total = 0
     for transaction in transactions:
         total += transaction.amount
+    # total_amout(transactions)
 
     spend = user.budget - total
     if spend > 0:
@@ -24,6 +25,7 @@ def transactions():
     else:
         spending = f'You have gone £{spend * -1} over.'    
     return render_template("transactions/index.html", all_transactions=transactions, user=user, total=total, spending=spending ) 
+
 
 @transactions_blueprint.route("/transactions/new")
 def new_transaction():

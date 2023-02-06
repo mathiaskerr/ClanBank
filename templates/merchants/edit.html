@@ -5,16 +5,19 @@
 <h1>Merchant ID: {{merchant.id}}</h1>
 <form action="/merchant/{{merchant.id}}/edit_complete" method="post">
     <div>
-        <input type="text" id="name" name="name" placeholder="Merchant" required >
+        <input type="text" id="name" value="{{merchant.name}}" name="name" placeholder="Merchant" required >
     </div>
     <div>
-        <input type="text" id="category" name="category" placeholder="Category" required >
+        <input type="text" id="category" value="{{merchant.category}}"name="category" placeholder="Category" required >
     </div>
     <div>
         <label for="active">Active:</label>
         <select id="active" name="active">
-        <option value="true">True</option>
-        <option value="false">False</option>
+
+        <option value="true"
+        {% if merchant.active == True %} selected="selected" {% endif %}>True</option>
+        <option value="false"
+        {% if merchant.active == False %} selected="selected" {% endif %}>False</option>
         </select>
       </div>
     
