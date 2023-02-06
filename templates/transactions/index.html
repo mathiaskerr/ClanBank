@@ -4,7 +4,11 @@
 <header>
     <a href="/transactions/new">Create New Transaction</a>
 </header>
-<p>Total Spend£{{total}}-----Budget:£{{user.budget}}---{{spending}}</p>
+<ul class="spending">
+    <li>Total Spend: £{{total}}</li>
+    <li>Budget: £{{user.budget}}</li>
+    <li>{{spending}}</li>
+</ul>
 
 {% for transaction in all_transactions %}
     <div class="transaction">

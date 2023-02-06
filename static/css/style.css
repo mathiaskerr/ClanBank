@@ -1,12 +1,35 @@
 *{
     text-align: center;
-    
-}
-body {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgb(132, 128, 226) 0%, rgb(84, 84, 219) 20%, rgba(0,212,255,1) 99%);
+    border-radius: 5px;
+    font-family: optima;
+    color: white;
 }
 
+body {
+    /* background-image: url("/static/images/background.jpg"); */
+    background-color: purple;
+}
+
+body {
+    /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(132, 128, 226) 0%, rgb(84, 84, 219) 20%, rgba(0,212,255,1) 99%); */
+}
+
+.edit-merchant {
+    display: flex;
+    justify-content: space-around;
+
+}
+.edit-merchant >form > button {
+    width: 75px;
+    color: red;
+}
+
+.edit-merchant >form > input {
+    width: 75px;
+    color: green;
+
+}
 .transaction{
     border: 1px solid black;
     margin: 10px;
@@ -14,18 +37,34 @@ body {
 }
 
 .navigate {
+    border: 1px  rgba(0, 0, 0, 0.714);
+    border-radius: 5px;
+    padding: 20px;
     list-style: None;
     display:flex;
     justify-content: space-between;
     margin-left: 20%;
     margin-right: 20%;
+    box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
 }
 
 .navigate > li > a{
     text-decoration: none;
-    color: white;
     padding: 10px;
     font-size: 25px;
+}
+
+.new_merchant > form > div{
+    padding: 5px; 
+}
+
+.new_merchant > form > div > input{  
+    width: 150px;
+}
+
+.new_merchant > form > button{  
+    width: 120px;
+    color: green;
 }
 
 .transaction-buttons . div {
@@ -33,9 +72,10 @@ body {
 }
 
 .merchants{
-    border: 1px solid black;
+    border: 1px  rgba(0, 0, 0, 0.714);
     margin: 10px;
     padding: 10px;
+    box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
 }
 .merchant_box{
     display:grid;
@@ -65,6 +105,13 @@ body {
     border-radius: 75px;
 }
 
+.spending{
+    list-style: none;
+    display:flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+}
 a {
     text-decoration: None;
 }

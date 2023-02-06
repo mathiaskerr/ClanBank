@@ -1,29 +1,31 @@
 {% extends 'base.html'%} {% block content %}
+  <div class="new_merchant">
+    <h2>Create New Merchant</h2>
+ 
+    <form action="/merchants" method="post">
+      <div>
+        <input type="text" id="name" name="name" placeholder="Merchant" required />
+      </div>
+      <div>
+        <input
+          type="text"
+          id="category"
+          name="category"
+          placeholder="Category"
+          required
+        />
+      </div>
+      <div>
+        <label for="active">Active:</label>
+        <select id="active" name="active">
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <button type="submit">Add Merchant</button>
+    </form>
+  </div>
 
-<a>Create New Merchant</a>
-
-<form action="/merchants" method="post">
-  <div>
-    <input type="text" id="name" name="name" placeholder="Merchant" required />
-  </div>
-  <div>
-    <input
-      type="text"
-      id="category"
-      name="category"
-      placeholder="Category"
-      required
-    />
-  </div>
-  <div>
-    <label for="active">Active:</label>
-    <select id="active" name="active">
-      <option value="true">True</option>
-      <option value="false">False</option>
-    </select>
-  </div>
-  <button type="submit">Add Merchant</button>
-</form>
 <div class="merchant_box">
   {% for merchant in all_merchants %}
   <div class="merchants">
@@ -40,15 +42,17 @@
             <p>Active: &#10060;</p>
         {% endif %}
     </div>
+  <div class="edit-merchant">
+    <form action="/merchant/{{merchant.id}}/edit">
+      <input type="submit" value="Edit" />
+    </form>
 
     <form action="/merchants/{{merchant.id}}/delete" method="POST">
       <button class="delete">Delete</button>
     </form>
 
-    <form action="/merchant/{{merchant.id}}/edit">
-      <input type="submit" value="Edit" />
-    </form>
-
+    
+  </div>
   </div>
   {% endfor %}
 </div>
