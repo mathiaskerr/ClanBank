@@ -4,8 +4,8 @@ from models.transaction import Transaction
 import repositories.merchant_repository as merchant_repository
 
 def save(transaction):
-    sql = "INSERT INTO transactions (merchant_id, tag, amount, time) VALUES (%s, %s, %s ,%s) RETURNING *"
-    values = [transaction.merchant.id, transaction.tag, transaction.amount, transaction.time]
+    sql = "INSERT INTO transactions (merchant_id, tag, amount, date) VALUES (%s, %s, %s ,%s) RETURNING *"
+    values = [transaction.merchant.id, transaction.tag, transaction.amount, transaction.date]
     results = run_sql(sql, values)
     id = results[0]['id']
     transaction.id = id
@@ -19,7 +19,7 @@ def select(id):
 
     if result:
         merchant = merchant_repository.select(result['merchant_id'])
-        transaction = Transaction(merchant, result['tag'], result['amount'], result['time'], result['id'])
+        transaction = Transaction(merchant, result['tag'], result['amount'], result['date'], result['id'])
     return transaction
 
 def select_all():
@@ -29,7 +29,7 @@ def select_all():
 
     for row in results:
         merchant = merchant_repository.select(row['merchant_id'])
-        transaction = Transaction(merchant, row['tag'], row['amount'], row['time'], row['id'])
+        transaction = Transaction(merchant, row['tag'], row['amount'], row['date'], row['id'])
         transactions.append(transaction)
     return transactions   
 
@@ -45,7 +45,7 @@ def delete(id):
     run_sql(sql, values)
 
 def update(transaction):
-    sql = "UPDATE transactions SET (merchant_id, tag, amount, time) = (%s, %s, %s, %s) WHERE id= %s"
-    values = [transaction.merchant.id, transaction.tag, transaction.amount, transaction.time, transaction.id]
+    sql = "UPDATE transactions SET (merchant_id, tag, amount, date) = (%s, %s, %s, %s) WHERE id= %s"
+    values = [transaction.merchant.id, transaction.tag, transaction.amount, transaction.date, transaction.id]
     run_sql(sql, values)
 

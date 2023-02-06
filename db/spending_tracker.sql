@@ -14,7 +14,7 @@ CREATE TABLE transactions(
     id SERIAL PRIMARY KEY,
     merchant_id INT NOT NULL REFERENCES merchants(id) ON DELETE CASCADE,
     tag VARCHAR(255),
-    time VARCHAR(255),
+    date VARCHAR(255),
     amount FLOAT
 );
 CREATE TABLE users(

@@ -30,9 +30,9 @@ transaction_1 = Transaction(merchant_1, 'Guns', 45000, datetime.date(2023,1,1))
 transaction_2 = Transaction(merchant_2, 'Shaguar', 60000, datetime.date(2022,12,26))
 transaction_3 = Transaction(merchant_3, 'Love Honey' , 69.00, datetime.date(2023,2,1))
 # transaction_repository.delete(40)
-transaction_list=[transaction_1, transaction_2,transaction_3]
-transaction_list.sort(key=lambda r: r.time)
-transaction_list.reverse()
+# transaction_list=[transaction_1, transaction_2,transaction_3]
+# transaction_list.sort(key=lambda r: r.date)
+# transaction_list.reverse()
 
 transaction_repository.save(transaction_1)
 transaction_repository.save(transaction_2)

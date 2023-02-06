@@ -4,7 +4,7 @@ from repositories import merchant_repository
 from repositories import user_repository
 from models.transaction import Transaction
 from models.user import User
-
+from datetime import datetime
 from flask import Blueprint
 
 transactions_blueprint = Blueprint("transactions",__name__)
@@ -14,6 +14,9 @@ def transactions():
     user = user_repository.select_all()
     user = user_repository.select(user[0].id)
     transactions = transaction_repository.select_all()
+    transactions.sort(key=lambda r: r.date)
+    transactions.reverse()
+
     total = 0
     for transaction in transactions:
         total += transaction.amount
@@ -36,10 +39,10 @@ def create_transaction():
     merchant_id = request.form['merchant_id']
     tag = request.form['tag']
     tag = tag.upper()
-    time = request.form['time']
+    date = datetime.strptime(request.form["date"], '%Y-%m-%d')
     amount = request.form['amount']
     merchant = merchant_repository.select(merchant_id)
-    transaction = Transaction(merchant, tag, amount, time)
+    transaction = Transaction(merchant, tag, amount, date)
     transaction_repository.save(transaction)
     return redirect('/transactions')
 
@@ -59,10 +62,10 @@ def update_transaction(id):
     merchant_id = request.form['merchant_id']
     tag = request.form['tag']
     tag = tag.upper()
-    time = request.form['time']
+    date = datetime.strptime(request.form["date"], '%Y-%m-%d')
     amount = request.form['amount']
     merchant = merchant_repository.select(merchant_id)
-    transaction = Transaction(merchant, tag, amount, time, id)
+    transaction = Transaction(merchant, tag, amount, date, id)
     transaction_repository.update(transaction)
     return redirect('/transactions')   
 
