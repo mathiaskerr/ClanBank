@@ -1,1 +1,1 @@
-![Alt text](static/screenshots/profile.png? raw=true "CLANBANK")
+![Alt text](project/static/screenshots/profile.png? raw=true "CLANBANK")
