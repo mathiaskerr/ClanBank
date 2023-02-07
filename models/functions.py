@@ -23,7 +23,7 @@ def  transaction_by_tag(tag, transactions):
     return transaction_tag        
 
 
-def tags(transactions):
+def tags_index(transactions):
     tags=[]
     for transaction in transactions:
         if transaction.tag not in tags:

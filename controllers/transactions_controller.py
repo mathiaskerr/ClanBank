@@ -72,11 +72,7 @@ def delete_transaction(id):
 @transactions_blueprint.route("/tags")
 def tags():
     transactions = transaction_repository.select_all()
-    tags=[]
-    for transaction in transactions:
-        if transaction.tag not in tags:
-            tags.append(transaction.tag)
-    
+    tags= tags_index(transactions)
     return render_template("transactions/tags.html", tags = tags)
 
 @transactions_blueprint.route("/tags/<tag>/transactions")
