@@ -33,8 +33,7 @@ button.delete{
     width: 75px;
     color: green;
     padding: 5px;
-    margin-top: -5px;
-
+    margin-top: -5px; 
 }
 
 .merchants{
@@ -42,34 +41,6 @@ button.delete{
     margin: 10px;
     padding: 10px;
     box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
-}
-
-.merchant-edit > div > input {
-    width: 300px;
-    padding: 15px;
-    color: black;
-    margin: 15px;
-    font-size: large;
-}
-
-.merchant-edit > div > select{
-    width: 332px;
-    padding: 15px;
-    color: black;
-    margin: 15px;
-    font-size: large;
-}
-
-.merchant-edit > button{
-    width: 150px;
-    color: green;
-    padding: 10px;
-    font-size: large;
-    margin: 15px;
-}
-
-.merchant-edit-title{
-    margin-top: 40px;
 }
 
 .merchant_box{
@@ -150,20 +121,7 @@ button.delete{
     margin-top: 50px;
     margin-bottom: 20px;
 }
-.profile > div > input {
-    width: 300px;
-    padding: 15px;
-    color: black;
-    margin: 15px;
-    font-size: large;
-}
-.profile > button {
-    width: 150px;
-    color: green;
-    padding: 15px;
-    font-size: large;
-    margin: 15px;
-}
+
 .profile-edit > input{
     width: 100px;
     color: green;
@@ -207,65 +165,8 @@ button.delete{
     margin: 10px;
     padding: 10px;
     box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
-
 }
 
-
-.transactions-edit > div > input{
-    width: 300px;
-    padding: 15px;
-    color: black;
-    margin: 15px;
-    font-size: large;
-}
-
-.transactions-edit > div > select{
-    width: 332px;
-    padding: 15px;
-    color: black;
-    margin: 15px;
-    font-size: large;
-}
-
-.transactions-edit > button{
-    width: 150px;
-    color: green;
-    padding: 10px;
-    font-size: large;
-    margin: 15px;
-}
-
-.transactions-edit-title{
-    margin-top: 40px;
-}
-
-.transaction-new > div > input{
-    width: 300px;
-    padding: 15px;
-    color: black;
-    margin: 15px;
-    font-size: large;
-}
-
-.transaction-new > div > select {
-    width: 332px;
-    padding: 15px;
-    color: black;
-    margin: 15px;
-    font-size: large;
-}
-
-.transaction-new > button {
-    width: 150px;
-    color: green;
-    padding: 10px;
-    font-size: large;
-    margin: 15px;
-}
-
-.transaction-new-title{
-    margin-top: 40px;
-}
 
 .transaction > ul{
     list-style: none;
@@ -281,4 +182,35 @@ button.delete{
     grid-template-columns: 20% 20% 20% 20% 20%;
     margin-left: 1%;
     margin-right:1%;
+}
+ /* most edit forms styled here */
+
+
+.input-form > div > input{
+    width: 300px;
+    padding: 15px;
+    color: black;
+    margin: 15px;
+    font-size: large;
+}
+
+.input-form > div > select {
+    width: 332px;
+    padding: 15px;
+    color: black;
+    margin: 15px;
+    font-size: large;
+}
+
+.input-form > button {
+    width: 150px;
+    color: green;
+    padding: 10px;
+    font-size: large;
+    margin: 15px;
+    
+}
+
+.input-form-title{
+    margin-top: 40px;
 }

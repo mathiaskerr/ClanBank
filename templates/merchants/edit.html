@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<h1 class="merchant-edit-title">Merchant ID: {{merchant.id}}</h1>
-<form class="merchant-edit" action="/merchant/{{merchant.id}}/edit_complete" method="post">
+<h1 class="input-form-title">Merchant ID: {{merchant.id}}</h1>
+<form class="input-form" action="/merchant/{{merchant.id}}/edit_complete" method="post">
     <div>
         <input type="text" id="name" value="{{merchant.name}}" name="name" placeholder="Merchant" required >
     </div>
