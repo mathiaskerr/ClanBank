@@ -19,16 +19,6 @@ def transactions():
     transactions.reverse()
     total = total_spend(transactions)
     spending = over_under_budget(user.budget, total)
-
-    # total = 0
-    # for transaction in transactions:
-    #     total += transaction.amount
-
-    # spend = user.budget - total
-    # if spend > 0:
-    #     spending = f'£{spend} under budget'
-    # else:
-    #     spending = f'£{spend * -1} over Budget'    
     return render_template("transactions/index.html", all_transactions=transactions, user=user, total=total, spending=spending ) 
 
 
@@ -91,16 +81,9 @@ def tags():
 
 @transactions_blueprint.route("/tags/<tag>/transactions")
 def tag_transactions(tag):
-
     transactions = transaction_repository.select_all()
-    transaction_tag = []
-    for transaction in transactions:
-        if transaction.tag == tag:
-            transaction_tag.append(transaction)
-
-    total = 0
-    for transaction in transaction_tag:
-        total += transaction.amount
+    transaction_tag = transaction_by_tag(tag, transactions)
+    total = total_spend(transaction_tag)
     return render_template("transactions/tag_transactions.html", transactions=transaction_tag, total=total)
 
 
