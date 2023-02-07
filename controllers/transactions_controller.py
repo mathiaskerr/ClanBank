@@ -4,6 +4,7 @@ from repositories import merchant_repository
 from repositories import user_repository
 from models.transaction import Transaction
 from models.user import User
+from models.functions import *
 from datetime import datetime, date
 from flask import Blueprint
 
@@ -16,16 +17,18 @@ def transactions():
     transactions = transaction_repository.select_all()
     transactions.sort(key=lambda r: r.date)
     transactions.reverse()
-    
-    total = 0
-    for transaction in transactions:
-        total += transaction.amount
+    total = total_spend(transactions)
+    spending = over_under_budget(user.budget, total)
 
-    spend = user.budget - total
-    if spend > 0:
-        spending = f'£{spend} under budget'
-    else:
-        spending = f'£{spend * -1} over Budget'    
+    # total = 0
+    # for transaction in transactions:
+    #     total += transaction.amount
+
+    # spend = user.budget - total
+    # if spend > 0:
+    #     spending = f'£{spend} under budget'
+    # else:
+    #     spending = f'£{spend * -1} over Budget'    
     return render_template("transactions/index.html", all_transactions=transactions, user=user, total=total, spending=spending ) 
 
 
@@ -98,7 +101,7 @@ def tag_transactions(tag):
     total = 0
     for transaction in transaction_tag:
         total += transaction.amount
-    return render_template("transactions/tag_transactions.html", transactions = transaction_tag, total=total)
+    return render_template("transactions/tag_transactions.html", transactions=transaction_tag, total=total)
 
 
 
