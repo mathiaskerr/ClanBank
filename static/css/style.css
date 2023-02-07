@@ -23,6 +23,22 @@ button.delete{
     color: red;
 }
 
+.drevil{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    width: 200px;
+    height: 100px;
+}
+
+.delete{
+    padding: 5px;
+    margin-top: -5px;
+    background-color: black;
+}
+
+
+
 .edit-delete{
     margin:auto;
     margin-top:  30px;
@@ -53,6 +69,13 @@ button.delete{
     margin-top: -5px; 
 }
 
+.home-text{
+    margin-top: 5%;
+    margin-right: 30%;
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
 
 .individual-transaction{
     margin-top: 100px;
@@ -120,29 +143,6 @@ button.delete{
     list-style: none;
 }
 
-
-.drevil{
-    position: absolute;
-    top: 30%;
-    right: 30%;
-    width: 200px;
-    height: 100px;
-}
-
-.delete{
-    padding: 5px;
-    margin-top: -5px;
-    background-color: black;
-}
-
-.home-text{
-    margin-top: 5%;
-    margin-right: 30%;
-    display:flex;
-    justify-content: flex-start;
-    flex-direction: column;
-
-}
 .profile-pic{
     max-width: 200px;
     max-height: 200px;
