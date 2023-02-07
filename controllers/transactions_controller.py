@@ -23,9 +23,9 @@ def transactions():
 
     spend = user.budget - total
     if spend > 0:
-        spending = f'You have £{spend} left.'
+        spending = f'£{spend} under budget'
     else:
-        spending = f'You have gone £{spend * -1} over.'    
+        spending = f'£{spend * -1} over Budget'    
     return render_template("transactions/index.html", all_transactions=transactions, user=user, total=total, spending=spending ) 
 
 

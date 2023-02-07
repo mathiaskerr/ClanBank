@@ -68,6 +68,10 @@ button.delete{
     margin: 15px;
 }
 
+.merchant-edit-title{
+    margin-top: 40px;
+}
+
 .merchant_box{
     display:grid;
     grid-template-columns: 33% 33% 33%;
@@ -181,6 +185,11 @@ button.delete{
     justify-content: space-between;
     margin-left: 20%;
     margin-right: 20%;
+    font-size: x-large;
+    margin: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
 }
 
 .tags{
@@ -200,19 +209,7 @@ button.delete{
     box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
 
 }
-.transaction-buttons > div > input{
-    width: 150px;
-    color: black;
-    padding: 5px;
-    margin: 5px;
-}
 
-.transaction-buttons > div > select {
-    width: 163px;
-    color: black;
-    padding: 5px;
-    margin: 5px;
-}
 
 .transactions-edit > div > input{
     width: 300px;
@@ -239,6 +236,34 @@ button.delete{
 }
 
 .transactions-edit-title{
+    margin-top: 40px;
+}
+
+.transaction-new > div > input{
+    width: 300px;
+    padding: 15px;
+    color: black;
+    margin: 15px;
+    font-size: large;
+}
+
+.transaction-new > div > select {
+    width: 332px;
+    padding: 15px;
+    color: black;
+    margin: 15px;
+    font-size: large;
+}
+
+.transaction-new > button {
+    width: 150px;
+    color: green;
+    padding: 10px;
+    font-size: large;
+    margin: 15px;
+}
+
+.transaction-new-title{
     margin-top: 40px;
 }
 

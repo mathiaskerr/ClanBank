@@ -1,9 +1,9 @@
 {% extends 'base.html'%}
 
 {% block content %}
-<h1> New Transaction</h1>
+<h1 class="transaction-new-title"> New Transaction</h1>
 
-<form class="transaction-buttons" action="/transactions" method="post">
+<form class="transaction-new" action="/transactions" method="post">
     <div>
         <!-- <label for="merchant">Merchant</label> -->
         <select id="merchant" name="merchant_id">
