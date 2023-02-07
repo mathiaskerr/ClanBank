@@ -16,7 +16,7 @@ def transactions():
     transactions = transaction_repository.select_all()
     transactions.sort(key=lambda r: r.date)
     transactions.reverse()
-
+    
     total = 0
     for transaction in transactions:
         total += transaction.amount

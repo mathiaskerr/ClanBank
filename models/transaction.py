@@ -8,17 +8,3 @@ class Transaction:
         self.amount = amount
         self.date = date
         self.id = id
-
-    # def total_amount(transactions):
-    #     total = 0
-    #     for transaction in transactions:
-    #         total += transaction.amount
-    #     return total    
-
-    # def on_budget(budget, total):
-
-    #     spend = budget - total
-    #     if spend > 0:
-    #         spending = f'You have £{spend} left.'
-    #     else:
-    #         spending = f'You have gone £{spend * -1} over.' 

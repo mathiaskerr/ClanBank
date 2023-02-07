@@ -1,1 +1,1 @@
-![Alt text](PDA/site_snaps/homepage.png?raw=true "CLANBANK")
+![Alt text](static/screenshots/profile.png raw=true "CLANBANK")

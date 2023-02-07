@@ -58,8 +58,6 @@ button.delete{
     margin-top: 100px;
 }   
 
-
-
 .merchants{
     border: 1px  rgba(0, 0, 0, 0.714);
     margin: 10px;
@@ -70,6 +68,10 @@ button.delete{
 .merchant_box{
     display:grid;
     grid-template-columns: 33% 33% 33%;
+}
+
+.merchant-title{
+    margin: 40px;
 }
 
 .navigate {

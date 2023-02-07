@@ -5,7 +5,6 @@
 
 <form class="input-form" action="/transactions" method="post">
     <div>
-        <!-- <label for="merchant">Merchant</label> -->
         <select id="merchant" name="merchant_id">
             {% for merchant in all_merchants %}
                 {% if merchant.active == True %}
