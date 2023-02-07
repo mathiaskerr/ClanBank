@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from repositories import merchant_repository
 from models.merchant import Merchant
-
+from models.functions import total_spend
 from flask import Blueprint
 
 merchants_blueprint = Blueprint("merchants",__name__)
@@ -45,7 +45,5 @@ def delete_merchant(id):
 @merchants_blueprint.route("/merchant/<id>/transactions")
 def merchant_transactions(id):
     transactions = merchant_repository.transactions(id)
-    total = 0
-    for transaction in transactions:
-        total += transaction.amount
+    total= total_spend(transactions)
     return render_template("merchants/transactions.html", transactions=transactions, total=total)
