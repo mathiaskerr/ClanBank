@@ -9,4 +9,4 @@ Clanbank is a spending tracker which helps you keep track and organise your spen
 
 
 
-![Alt text](project/static/screenshots/profile.png? raw=true "CLANBANK")
+![Alt text](project/static/screenshots/profile.png?raw=true "CLANBANK")
