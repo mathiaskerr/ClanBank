@@ -27,6 +27,7 @@ button.delete{
     margin-top:  30px;
     width: fit-content;
     display:flex;
+    justify-content: space-between;
 }
 
 .edit-delete > form > input {
@@ -34,6 +35,7 @@ button.delete{
     color: green;
     padding: 5px;
     margin-top: -5px; 
+    margin-right: 35px;
 }
 
 

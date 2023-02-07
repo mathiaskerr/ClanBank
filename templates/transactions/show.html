@@ -4,12 +4,12 @@
 
 
 <div class="individual-transaction">
-    <P>Order no: {{show_transaction.id}}</P>
-    <p>Merchant: {{show_transaction.merchant.name}}</p>
-    <p>Category: {{show_transaction.merchant.category}}</p>
-    <p>Tag: {{show_transaction.tag}}</p>
-    <p>Amount: {{show_transaction.amount}}</p>
-    <p>Date: {{show_transaction.date}}</p>
+    <h1>Order no: {{show_transaction.id}}</h1>
+    <h2>Merchant: {{show_transaction.merchant.name}}</h2>
+    <h2>Category: {{show_transaction.merchant.category}}</h2>
+    <h2>Tag: {{show_transaction.tag}}</h2>
+    <h2>Amount: {{show_transaction.amount}}</h2>
+    <h2>Date: {{show_transaction.date}}</h2>
 
     <div class="edit-delete">
         <form action="/{{show_transaction.id}}">
