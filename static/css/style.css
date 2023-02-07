@@ -151,6 +151,11 @@ button.delete{
     margin: 10px;
 }
 
+.profile-edit-title{
+    margin-top: 40px;
+}
+
+
 .spending{
     list-style: none;
     display:flex;

@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h2>User ID: {{user.id}}</h2>
+<h2 class="profile-edit-title">User ID: {{user.id}}</h2>
 <form class="profile"action="/profile/{{user.id}}/update" method="post">
     <div>
         <input type="text" id="first_name" name="first_name" value="{{user.first_name}}" placeholder="First Name" required >
