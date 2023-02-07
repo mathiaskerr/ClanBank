@@ -18,10 +18,24 @@ body {
     margin: 10px;
 }
 button.delete{
-    
     width: 75px;
     color: red;
 }
+
+.edit-delete{
+    margin:auto;
+    margin-top:  30px;
+    width: fit-content;
+    display:flex;
+}
+
+.edit-delete > form > input {
+    width: 75px;
+    color: green;
+    padding: 5px;
+    margin-top: -5px; 
+}
+
 
 .edit-merchant-button {
     display: flex;
@@ -35,6 +49,13 @@ button.delete{
     padding: 5px;
     margin-top: -5px; 
 }
+
+
+.individual-transaction{
+    margin-top: 100px;
+}   
+
+
 
 .merchants{
     border: 1px  rgba(0, 0, 0, 0.714);
@@ -167,6 +188,9 @@ button.delete{
     box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
 }
 
+.transaction-heading{
+    margin: 40px;
+}
 
 .transaction > ul{
     list-style: none;
@@ -183,7 +207,7 @@ button.delete{
     margin-left: 1%;
     margin-right:1%;
 }
- /* most edit forms styled here */
+ /* multiple edit forms styled here */
 
 
 .input-form > div > input{

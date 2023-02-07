@@ -6,9 +6,9 @@
 
 
 {% for tag in tags%}
-<div class="tags">
-<a href="/tags/{{tag}}/transactions" >{{tag}}</a>
-</div>
+<a href="/tags/{{tag}}/transactions" ><div class="tags">
+{{tag}}
+</div></a>
 {% endfor %}
 </div>
 {% endblock %}

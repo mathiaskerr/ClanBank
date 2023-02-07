@@ -53,6 +53,6 @@ def transactions(id):
 
     for row in results:
         merchant = select(id)
-        transaction = Transaction(merchant, row['tag'], row['amount'], row["time"], row['id'])
+        transaction = Transaction(merchant, row['tag'], row['amount'], row["date"], row['id'])
         transactions.append(transaction)
     return transactions

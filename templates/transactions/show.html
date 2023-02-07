@@ -3,19 +3,22 @@
 {% block content %}
 
 
-<div>
+<div class="individual-transaction">
     <P>Order no: {{show_transaction.id}}</P>
     <p>Merchant: {{show_transaction.merchant.name}}</p>
     <p>Category: {{show_transaction.merchant.category}}</p>
     <p>Tag: {{show_transaction.tag}}</p>
     <p>Amount: {{show_transaction.amount}}</p>
     <p>Date: {{show_transaction.date}}</p>
-    <form action="/{{show_transaction.id}}">
-        <input type="submit" value="Edit"/>
-    </form>    
-    <form action="/transaction/{{show_transaction.id}}/delete" method="POST">
-        <button class="delete">Delete</button>
-    </form>   
+
+    <div class="edit-delete">
+        <form action="/{{show_transaction.id}}">
+            <input  type="submit" value="Edit"/>
+        </form>    
+        <form action="/transaction/{{show_transaction.id}}/delete" method="POST">
+            <button class="delete">Delete</button>
+        </form>   
+    </div>
 </div>
 {% endblock %}
 

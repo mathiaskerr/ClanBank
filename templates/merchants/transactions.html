@@ -1,15 +1,30 @@
 {% extends 'base.html'%}
 
 {% block content %}
-<p>Total Spend: £{{total}}</p>
+<h1 class="transaction-heading">Total Spend: £{{total}}</h1>
+<ul class="transaction-title">
+    <li>Merchant</li>
+    <li>Tag</li>
+    <li>Date</li>
+    <li>Amount</li>
+    <li>Delete</li>
+</ul>
 {% for transaction in transactions %}
-<div class="transaction">
-    <a href="/transaction/{{transaction.id}}">{{transaction.merchant.name}}--{{transaction.tag}}--{{transaction.date}}--  £{{transaction.amount}}</a>   
-        <form action="/transaction/{{transaction.id}}/delete" method="POST">
-        <button class="delete">Delete</button>
-    </form>    
-</div>
-
+<a href="/transaction/{{transaction.id}}"><div class="transaction">
+        <ul> 
+            <li>{{transaction.merchant.name}}</li>
+            <li>{{transaction.tag}}</li>
+            <li>{{transaction.date}}</li>
+            <li>£{{transaction.amount}}</li>
+    
+ 
+                <form action="/transaction/{{transaction.id}}/delete" method="POST">
+                <button class="delete">Delete</button>
+            </form>    
+        </ul>   
+    </div></a>
+    
+    
 
 {% endfor %}
 
