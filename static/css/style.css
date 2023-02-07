@@ -13,9 +13,10 @@ body {
 
 
 .bank-name{
+    font-size:xx-large;
     display:flex;
     justify-content: flex-start;
-    margin: 10px;
+    margin: 15px;
 }
 button.delete{
     width: 75px;
@@ -95,7 +96,8 @@ button.delete{
 
 .new-merchant > li > input{  
     width: 150px;
-    padding: 5px
+    padding: 5px;
+    color: black;
 }
 
 .new-merchant > li > button{  
@@ -175,13 +177,14 @@ button.delete{
 
 .tags{
     border: 1px  rgba(0, 0, 0, 0.714);
-    margin: 10px;
-    padding: 10px;
+    margin: 20px;
+    padding: 20px;
     box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
 }
 .tags-box{
     display:grid;
     grid-template-columns: 25% 25% 25% 25%;
+    
 }
 .transaction{
     border: 1px  rgba(0, 0, 0, 0.714);
@@ -195,6 +198,7 @@ button.delete{
 }
 
 .transaction > ul{
+    font-size: large;
     list-style: none;
     display:grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
