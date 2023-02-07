@@ -60,7 +60,7 @@ button.delete{
 
 .merchants{
     border: 1px  rgba(0, 0, 0, 0.714);
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
     box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
 }
@@ -68,6 +68,8 @@ button.delete{
 .merchant_box{
     display:grid;
     grid-template-columns: 33% 33% 33%;
+    
+
 }
 
 .merchant-title{
