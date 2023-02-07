@@ -8,13 +8,19 @@ a {
     text-decoration: None;
 }
 body {
-    /* background-image: url("/static/images/background.jpg"); */
-    background-color: purple;
+    background-image: url("/static/images/background.jpg");
+    /* background-color: purple; */
 }
 
 body {
     /* background: rgb(2,0,36);
     background: linear-gradient(90deg, rgb(132, 128, 226) 0%, rgb(84, 84, 219) 20%, rgba(0,212,255,1) 99%); */
+}
+
+.bank-name{
+    display:flex;
+    justify-content: flex-start;
+    margin: 10px;
 }
 button.delete{
     
@@ -35,6 +41,8 @@ button.delete{
 .edit-merchant >form > input {
     width: 75px;
     color: green;
+    padding: 5px;
+    margin-top: -5px;
 
 }
 
@@ -67,19 +75,30 @@ button.delete{
     font-size: 25px;
 }
 
-.new_merchant > form > div{
+.new-merchant > form > div{
     padding: 5px; 
 }
 
-.new_merchant > form > div > input{  
+.new-merchant > li > input{  
     width: 150px;
+    padding: 5px
 }
 
-.new_merchant > form > button{  
+.new-merchant > li > button{  
     width: 120px;
     color: green;
+    padding: 5px;
 }
-
+.new-merchant > li > select{
+    color:black;
+    width: 120px;
+    padding: 5px;
+}
+.new-merchant {
+    display:flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
 
 
 .drevil{
@@ -88,6 +107,12 @@ button.delete{
     right: 30%;
     width: 200px;
     height: 100px;
+}
+
+.delete{
+    padding: 5px;
+    margin-top: -5px;
+    background-color: black;
 }
 
 .home-text{
@@ -102,6 +127,28 @@ button.delete{
     max-width: 150px;
     max-height: 150px;
     border-radius: 75px;
+    margin: 30px;
+}
+.profile > div > input {
+    width: 300px;
+    padding: 15px;
+    color: black;
+    margin: 10px;
+    font-size: large;
+}
+.profile > button {
+    width: 150px;
+    color: green;
+    padding: 15px;
+    font-size: large;
+    margin: 10px;
+}
+.profile-edit > input{
+    width: 100px;
+    color: green;
+    padding: 10px;
+    font-size: large;
+    margin: 10px;
 }
 
 .spending{
@@ -141,6 +188,34 @@ button.delete{
     color: black;
     padding: 5px;
     margin: 5px;
+}
+
+.transactions-edit > div > input{
+    width: 300px;
+    padding: 15px;
+    color: black;
+    margin: 10px;
+    font-size: large;
+}
+
+.transactions-edit > div > select{
+    width: 332px;
+    padding: 15px;
+    color: black;
+    margin: 10px;
+    font-size: large;
+}
+
+.transactions-edit > button{
+    width: 150px;
+    color: green;
+    padding: 10px;
+    font-size: large;
+    margin: 15px;
+}
+
+.transactions-edit-title{
+    margin-top: 40px;
 }
 
 .transaction > ul{

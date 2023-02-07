@@ -3,10 +3,9 @@
 {% block content %}
 <img class="profile-pic" src="static/images/austin.jpeg"><br>
 {% for user in users%}
-<h2>{{user.first_name}}</h2>
-<h2>{{user.last_name}}</h2>
+<h2>{{user.first_name}} {{user.last_name}}</h2>
 <h3> Budget: £{{user.budget}}</h3>
-<form action="/profile/{{user.id}}/edit">
+<form class="profile-edit" action="/profile/{{user.id}}/edit">
     <input type="submit" value="Edit"/>
 </form>   
 {% endfor %}

@@ -1,9 +1,9 @@
 {% extends 'base.html'%}
 
 {% block content %}
-<p>Order no: {{transaction.id}}</p>
+<h2 class="transactions-edit-title">Order no: {{transaction.id}}</h2>
 
-<form action="/transaction/{{transaction.id}}/edit" method="post">
+<form class="transactions-edit" action="/transaction/{{transaction.id}}/edit" method="post">
     <div>
         <select id="merchant" name="merchant_id">
             {% for merchant in merchants %}

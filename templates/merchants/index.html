@@ -1,30 +1,25 @@
 {% extends 'base.html'%} {% block content %}
-  <div class="new_merchant">
+
     <h2>Create New Merchant</h2>
  
     <form action="/merchants" method="post">
-      <div>
-        <input type="text" id="name" name="name" placeholder="Merchant" required />
-      </div>
-      <div>
-        <input
-          type="text"
-          id="category"
-          name="category"
-          placeholder="Category"
-          required
-        />
-      </div>
-      <div>
-        <label for="active">Active:</label>
+      <ul class="new-merchant">
+        <li><label for="name">Merchant:</label>
+          <input type="text" id="name" name="name" placeholder="Merchant" required /></li>
+        <li><label for="category">Category:</label>
+          <input type="text" id="category" name="category" placeholder="Category" required/></li>
+      
+        <li> <label for="active">Active:</label>
         <select id="active" name="active">
           <option value="true">True</option>
           <option value="false">False</option>
-        </select>
-      </div>
-      <button type="submit">Add Merchant</button>
+        </select></li>
+      
+        <li><button type="submit">Add Merchant</button></li>
+    </ul>
     </form>
-  </div>
+  
+  
 
 <div class="merchant_box">
   {% for merchant in all_merchants %}
