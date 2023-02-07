@@ -23,17 +23,13 @@ button.delete{
     color: red;
 }
 
-.edit-merchant {
+.edit-merchant-button {
     display: flex;
     justify-content: space-around;
 
 }
-.edit-merchant >form > button {
-    width: 75px;
-    color: red;
-}
 
-.edit-merchant >form > input {
+.edit-merchant-button >form > input {
     width: 75px;
     color: green;
     padding: 5px;
@@ -47,6 +43,31 @@ button.delete{
     padding: 10px;
     box-shadow: 3px 3px 3px 3px rgba(201, 199, 199, 0.431);
 }
+
+.merchant-edit > div > input {
+    width: 300px;
+    padding: 15px;
+    color: black;
+    margin: 15px;
+    font-size: large;
+}
+
+.merchant-edit > div > select{
+    width: 332px;
+    padding: 15px;
+    color: black;
+    margin: 15px;
+    font-size: large;
+}
+
+.merchant-edit > button{
+    width: 150px;
+    color: green;
+    padding: 10px;
+    font-size: large;
+    margin: 15px;
+}
+
 .merchant_box{
     display:grid;
     grid-template-columns: 33% 33% 33%;
@@ -129,7 +150,7 @@ button.delete{
     width: 300px;
     padding: 15px;
     color: black;
-    margin: 10px;
+    margin: 15px;
     font-size: large;
 }
 .profile > button {
@@ -137,7 +158,7 @@ button.delete{
     color: green;
     padding: 15px;
     font-size: large;
-    margin: 10px;
+    margin: 15px;
 }
 .profile-edit > input{
     width: 100px;
@@ -148,7 +169,7 @@ button.delete{
 }
 
 .profile-edit-title{
-    margin-top: 40px;
+    margin-top: 75px;
 }
 .profile-name{
     font-size: xx-large;
@@ -197,7 +218,7 @@ button.delete{
     width: 300px;
     padding: 15px;
     color: black;
-    margin: 10px;
+    margin: 15px;
     font-size: large;
 }
 
@@ -205,7 +226,7 @@ button.delete{
     width: 332px;
     padding: 15px;
     color: black;
-    margin: 10px;
+    margin: 15px;
     font-size: large;
 }
 

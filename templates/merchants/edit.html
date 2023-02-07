@@ -3,7 +3,7 @@
 {% block content %}
 
 <h1>Merchant ID: {{merchant.id}}</h1>
-<form action="/merchant/{{merchant.id}}/edit_complete" method="post">
+<form class="merchant-edit" action="/merchant/{{merchant.id}}/edit_complete" method="post">
     <div>
         <input type="text" id="name" value="{{merchant.name}}" name="name" placeholder="Merchant" required >
     </div>
@@ -11,7 +11,7 @@
         <input type="text" id="category" value="{{merchant.category}}"name="category" placeholder="Category" required >
     </div>
     <div>
-        <label for="active">Active:</label>
+        <label for="active">Active</label><br>
         <select id="active" name="active">
 
         <option value="true"
