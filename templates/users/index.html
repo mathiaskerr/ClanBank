@@ -3,8 +3,8 @@
 {% block content %}
 <img class="profile-pic" src="static/images/austin.jpeg"><br>
 {% for user in users%}
-<h2>{{user.first_name}} {{user.last_name}}</h2>
-<h3> Budget: £{{user.budget}}</h3>
+<h1 class="profile-name">{{user.first_name}} {{user.last_name}}</h1>
+<h2> Budget: £{{user.budget}}</h2>
 <form class="profile-edit" action="/profile/{{user.id}}/edit">
     <input type="submit" value="Edit"/>
 </form>   

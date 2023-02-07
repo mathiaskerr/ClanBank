@@ -9,13 +9,8 @@ a {
 }
 body {
     background-image: url("/static/images/background.jpg");
-    /* background-color: purple; */
 }
 
-body {
-    /* background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgb(132, 128, 226) 0%, rgb(84, 84, 219) 20%, rgba(0,212,255,1) 99%); */
-}
 
 .bank-name{
     display:flex;
@@ -124,10 +119,11 @@ button.delete{
 
 }
 .profile-pic{
-    max-width: 150px;
-    max-height: 150px;
-    border-radius: 75px;
-    margin: 30px;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 100px;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 .profile > div > input {
     width: 300px;
@@ -154,7 +150,9 @@ button.delete{
 .profile-edit-title{
     margin-top: 40px;
 }
-
+.profile-name{
+    font-size: xx-large;
+ }
 
 .spending{
     list-style: none;
