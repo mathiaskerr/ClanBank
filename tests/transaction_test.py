@@ -26,4 +26,4 @@ class TestTransaction(unittest.TestCase):
             transaction_tag = transaction_by_tag(self.transaction_1.tag, self.transactions)
             self.assertEqual(1, len(transaction_tag))
 
-
+    
