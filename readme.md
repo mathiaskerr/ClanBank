@@ -21,7 +21,7 @@ The user should be able to filter their view of transactions, for example, to vi
 
 
 
-The Home Page:
+## The Home Page:
 ![Home page](static/screenshots/home_page.png?raw=true "Home Page")
 
 further work would see the home page updated with a different fact each day.
@@ -31,12 +31,15 @@ further work would see the home page updated with a different fact each day.
     
 
    
+## Editing a Transaction:
+![Edit Transaction](static/screenshots/edit_transaction.png?raw=true "Edit Transaction")
 
-    ![Edit Tansaction](static/screenshots/edit_transaction.png?raw=true "Edit Transaction")
 
 
 
-To run pull down and open in vscode and type 'flask run' in the console
+ 
+
+
 
 
 
@@ -50,3 +53,4 @@ To run pull down and open in vscode and type 'flask run' in the console
 
 ![Transactions](static/screenshots/transactions.png?raw=true "Transactions")
 
+To run pull down and open in vscode and type 'flask run' in the console
