@@ -1,5 +1,5 @@
 import unittest
-
+from models.functions import *
 from models.transaction import Transaction 
 from models.merchant import Merchant
 import datetime
@@ -19,12 +19,11 @@ class TestTransaction(unittest.TestCase):
 
         self.transactions = [self.transaction_1, self.transaction_2, self.transaction_3]
 
-        def test_total_spend(self):
-            self.transaction.total_spend(self.transactions)
-            self.assertEqual(105069, self.transaction.total_spend(self.transactions))
+    def test_total_spend(self):
+            self.assertEqual(105069, total_spend(self.transactions))
 
-        def test_transaction_by_tag(self):
-            transaction_tag = self.transaction.transaction_by_tag(self.transaction_1.tag, self.transactions)
+    def test_transaction_by_tag(self):
+            transaction_tag = transaction_by_tag(self.transaction_1.tag, self.transactions)
             self.assertEqual(1, len(transaction_tag))
 
 
