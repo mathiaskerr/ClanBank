@@ -36,32 +36,15 @@ Build an app that allows a user to track their spending.
 further work would see the home page updated with a different fact each day.
 
 
-
-    
-
-   
 ## Editing a Transaction:
 ![Edit Transaction](static/screenshots/edit_transaction.png?raw=true "Edit Transaction")
 
-
-
-
- 
-
-
-
-
-
-
-
-
-
+## User Profile:
 ![Profile Page](static/screenshots/profile.png?raw=true "Profile Page")
 
 
-
+## Transaction List:
 ![Transactions](static/screenshots/transactions.png?raw=true "Transactions")
 
-To run pull down and open in vscode and type 'flask run' in the console
 
 
