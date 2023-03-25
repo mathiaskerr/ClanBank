@@ -3,9 +3,6 @@
 ## Spending Tracker
 Build an app that allows a user to track their spending.
 
-### Spending Tracker
-Build an app that allows a user to track their spending.
-
 ### MVP
 * The app should allow the user to create and edit merchants, e.g. Tesco, Amazon, ScotRail
 * The app should allow the user to create and edit tags for their spending, e.g. groceries, entertainment, transport
@@ -46,6 +43,12 @@ python3 console.py
 flask run 
 ```
 ***
+
+### About:
+
+I built the app with a SQL database with a one to many relationship between the transactions and the merchants and tags. The main functionality that I was proud to achieve with this project was to be able to filter by either merchants or tags.
+The project really consolidated the 5 weeks of learning and made me realise how far I had come. I learned the importance of planning and time management.
+
 
 
 
