@@ -54,6 +54,10 @@ flask run
 
 further work would see the home page updated with a different fact each day.
 
+## Transaction List:
+![Transactions](static/screenshots/transactions.png?raw=true "Transactions")
+
+
 
 ## Editing a Transaction:
 ![Edit Transaction](static/screenshots/edit_transaction.png?raw=true "Edit Transaction")
@@ -62,8 +66,6 @@ further work would see the home page updated with a different fact each day.
 ![Profile Page](static/screenshots/profile.png?raw=true "Profile Page")
 
 
-## Transaction List:
-![Transactions](static/screenshots/transactions.png?raw=true "Transactions")
 
 
 
