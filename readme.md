@@ -21,25 +21,30 @@ Build an app that allows a user to track their spending.
 ***
 ## To Run File:
 
-1. 
+1. Drop Database
 ```sh
 dropdb -d spending_tracker 
-2. 
+```
+2. Create Database
 
 ```sh
 createdb -d spending_tracker
-3.
+```
+3. Connect Database
 
 ```sh
 psql -spending_tracker -f spending_tracker.sql
-4. 
+```
+4. Seed Database
 
 ```sh
 python3 console.py 
-5. 
+```
+5. Run Server
 
 ```sh
 flask run 
+```
 ***
 
 
