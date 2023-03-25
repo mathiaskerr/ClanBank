@@ -1,6 +1,6 @@
 from models.transaction import Transaction
 
-def total_spend(transactions):
+def  total_spend(transactions):
     total = 0
     for transaction in transactions:
         total += transaction.amount
