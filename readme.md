@@ -18,15 +18,29 @@ Build an app that allows a user to track their spending.
 * The user should be able to supply a budget, and the app should alert the user somehow when when they are nearing this budget or have gone over it.
 * The user should be able to filter their view of transactions, for example, to view all transactions in a given month, or view all spending on groceries.
 
-
+***
 ## To Run File:
 
-1. dropdb -d spending_tracker 
-2. createdb -d spending_tracker
-3. psql -spending_tracker -f spending_tracker.sql
-4. python3 console.py 
-5. flask run 
+1. 
+```sh
+dropdb -d spending_tracker 
+2. 
 
+```sh
+createdb -d spending_tracker
+3.
+
+```sh
+psql -spending_tracker -f spending_tracker.sql
+4. 
+
+```sh
+python3 console.py 
+5. 
+
+```sh
+flask run 
+***
 
 
 
